@@ -1,0 +1,72 @@
+/****************************************************************************
+ *                                                                           *
+ *  Copyright (C) 2014-2015 iBuildApp, Inc. ( http://ibuildapp.com )         *
+ *                                                                           *
+ *  This file is part of iBuildApp.                                          *
+ *                                                                           *
+ *  This Source Code Form is subject to the terms of the iBuildApp License.  *
+ *  You can obtain one at http://ibuildapp.com/license/                      *
+ *                                                                           *
+ ****************************************************************************/
+
+/* --- module TakePicture strings --- */
+
+/* Can't save the image! */
+"mTP_errorSavingPhotoMessage" = "Can't save the image!";
+
+/* OK */
+"mTP_errorSavingPhotoOkButtonTitle" = "OK";
+
+/* Error! */
+"mTP_errorSavingPhotoTitle" = "Error!";
+
+/* Requires a camera to take pictures */
+"mTP_noCameraMessage" = "Requires a camera to take pictures";
+
+/* OK */
+"mTP_noCameraOkButtonTitle" = "OK";
+
+/* No Camera Available */
+"mTP_noCameraTitle" = "No Camera Available";
+
+/* Post */
+"mTP_postButtonTitle" = "Post";
+
+/* Caption */
+"mTP_postFormTitle" = "Caption";
+
+/* Retake */
+"mTP_retake" = "Retake";
+
+/* Save */
+"mTP_save" = "Save";
+
+/* OK */
+"mTP_sendingEmailErrorAlertOkButtonTitle" = "OK";
+
+/* Error! */
+"mTP_sendingEmailErrorTitle" = "Error!";
+
+/* OK */
+"mTP_sendingEmailSuccessAlertOkButtonTitle" = "OK";
+
+/* New picture from camera */
+"mTP_sharePhotoEmailSubject" = "New picture from camera";
+
+/* The picture has been posted to your Facebook wall. */
+"mTP_sharingFBSuccessAlertMessage" = "The picture has been posted to your Facebook wall.";
+
+/* OK */
+"mTP_sharingFBSuccessAlertMessageOkButtonTitle" = "OK";
+
+/* The picture has been saved to your iPhone. */
+"mTP_successSavingPhotoMessage" = "The picture has been saved to your iPhone.";
+
+/* OK */
+"mTP_successSavingPhotoOkButtonTitle" = "OK";
+
+/* Connection with Twitter failed! */
+"mTP_twitterFailed" = "Connection with Twitter failed!";
+
+/* The message has been posted to your Twitter account. */
+"mTP_twitterPosted" = "The message has been posted to your Twitter account.";

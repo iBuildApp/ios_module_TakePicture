@@ -1,0 +1,72 @@
+/****************************************************************************
+ *                                                                           *
+ *  Copyright (C) 2014-2015 iBuildApp, Inc. ( http://ibuildapp.com )         *
+ *                                                                           *
+ *  This file is part of iBuildApp.                                          *
+ *                                                                           *
+ *  This Source Code Form is subject to the terms of the iBuildApp License.  *
+ *  You can obtain one at http://ibuildapp.com/license/                      *
+ *                                                                           *
+ ****************************************************************************/
+
+/* --- module TakePicture strings --- */
+
+/* Can't save the image! */
+"mTP_errorSavingPhotoMessage" = "Изображение не сохранено!";
+
+/* OK */
+"mTP_errorSavingPhotoOkButtonTitle" = "OK";
+
+/* Error! */
+"mTP_errorSavingPhotoTitle" = "Ошибка!";
+
+/* Requires a camera to take pictures */
+"mTP_noCameraMessage" = "Для съемки изображений необходима камера";
+
+/* OK */
+"mTP_noCameraOkButtonTitle" = "OK";
+
+/* No Camera Available */
+"mTP_noCameraTitle" = "Камера недоступна";
+
+/* Post */
+"mTP_postButtonTitle" = "Отправить";
+
+/* Caption */
+"mTP_postFormTitle" = "Заголовок";
+
+/* Retake */
+"mTP_retake" = "Заново";
+
+/* Save */
+"mTP_save" = "Сохр.";
+
+/* OK */
+"mTP_sendingEmailErrorAlertOkButtonTitle" = "OK";
+
+/* Error! */
+"mTP_sendingEmailErrorTitle" = "Ошибка!";
+
+/* OK */
+"mTP_sendingEmailSuccessAlertOkButtonTitle" = "OK";
+
+/* New picture from camera */
+"mTP_sharePhotoEmailSubject" = "Новое фото";
+
+/* The picture has been posted to your Facebook wall. */
+"mTP_sharingFBSuccessAlertMessage" = "Фотография была опубликована на Вашей стене Facebook";
+
+/* OK */
+"mTP_sharingFBSuccessAlertMessageOkButtonTitle" = "OK";
+
+/* The picture has been saved to your iPhone. */
+"mTP_successSavingPhotoMessage" = "Фотография была сохранена";
+
+/* OK */
+"mTP_successSavingPhotoOkButtonTitle" = "OK";
+
+/* Connection with Twitter failed! */
+"mTP_twitterFailed" = "Ошибка соединения с Twitter!";
+
+/* The message has been posted to your Twitter account. */
+"mTP_twitterPosted" = "Сообщение было опубликовано под Вашей учетной запиcью Twitter";

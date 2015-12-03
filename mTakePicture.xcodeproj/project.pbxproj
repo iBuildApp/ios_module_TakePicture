@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5970542E159DB8080003BA92 /* mTakePicture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5970542D159DB8080003BA92 /* mTakePicture.m */; };
+		59E93D5E192F5C1900430F4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D5C192F5C1900430F4B /* InfoPlist.strings */; };
+		59E93D77192F5C6E00430F4B /* mTP_buttonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D67192F5C6E00430F4B /* mTP_buttonBG.png */; };
+		59E93D78192F5C6E00430F4B /* mTP_buttonBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D68192F5C6E00430F4B /* mTP_buttonBG@2x.png */; };
+		59E93D79192F5C6E00430F4B /* mTP_cameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D69192F5C6E00430F4B /* mTP_cameraButton.png */; };
+		59E93D7A192F5C6E00430F4B /* mTP_cameraButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D6A192F5C6E00430F4B /* mTP_cameraButton@2x.png */; };
+		59E93D7D192F5C6E00430F4B /* mTP_saveBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D6D192F5C6E00430F4B /* mTP_saveBG.png */; };
+		59E93D7E192F5C6E00430F4B /* mTP_saveBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D6E192F5C6E00430F4B /* mTP_saveBG@2x.png */; };
+		59E93D81192F5C6E00430F4B /* mTP_switchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D71192F5C6E00430F4B /* mTP_switchButton.png */; };
+		59E93D82192F5C6E00430F4B /* mTP_switchButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D72192F5C6E00430F4B /* mTP_switchButton@2x.png */; };
+		59E93D87192F601900430F4B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59E93D89192F601900430F4B /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59E93EBB192F6B2900430F4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5970541B159DB8080003BA92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59E93D50192F5C1900430F4B;
+			remoteInfo = mTakePictureResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59705424159DB8080003BA92 /* mTakePicture.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = mTakePicture.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5970542B159DB8080003BA92 /* mTakePicture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mTakePicture-Prefix.pch"; sourceTree = "<group>"; };
+		5970542C159DB8080003BA92 /* mTakePicture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mTakePicture.h; sourceTree = "<group>"; };
+		5970542D159DB8080003BA92 /* mTakePicture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mTakePicture.m; sourceTree = "<group>"; };
+		59E93D51192F5C1900430F4B /* mTakePictureResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mTakePictureResources.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E93D5B192F5C1900430F4B /* mTakePictureResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mTakePictureResources-Info.plist"; sourceTree = "<group>"; };
+		59E93D5D192F5C1900430F4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		59E93D5F192F5C1900430F4B /* mTakePictureResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mTakePictureResources-Prefix.pch"; sourceTree = "<group>"; };
+		59E93D67192F5C6E00430F4B /* mTP_buttonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mTP_buttonBG.png; path = mTakePicture/resources/mTP_buttonBG.png; sourceTree = SOURCE_ROOT; };
+		59E93D68192F5C6E00430F4B /* mTP_buttonBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mTP_buttonBG@2x.png"; path = "mTakePicture/resources/mTP_buttonBG@2x.png"; sourceTree = SOURCE_ROOT; };
+		59E93D69192F5C6E00430F4B /* mTP_cameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mTP_cameraButton.png; path = mTakePicture/resources/mTP_cameraButton.png; sourceTree = SOURCE_ROOT; };
+		59E93D6A192F5C6E00430F4B /* mTP_cameraButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mTP_cameraButton@2x.png"; path = "mTakePicture/resources/mTP_cameraButton@2x.png"; sourceTree = SOURCE_ROOT; };
+		59E93D6D192F5C6E00430F4B /* mTP_saveBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mTP_saveBG.png; path = mTakePicture/resources/mTP_saveBG.png; sourceTree = SOURCE_ROOT; };
+		59E93D6E192F5C6E00430F4B /* mTP_saveBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mTP_saveBG@2x.png"; path = "mTakePicture/resources/mTP_saveBG@2x.png"; sourceTree = SOURCE_ROOT; };
+		59E93D71192F5C6E00430F4B /* mTP_switchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mTP_switchButton.png; path = mTakePicture/resources/mTP_switchButton.png; sourceTree = SOURCE_ROOT; };
+		59E93D72192F5C6E00430F4B /* mTP_switchButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mTP_switchButton@2x.png"; path = "mTakePicture/resources/mTP_switchButton@2x.png"; sourceTree = SOURCE_ROOT; };
+		59E93D88192F601900430F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59E93D8A192F601E00430F4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		59E93D8B192F602800430F4B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59705421159DB8080003BA92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59E93D4E192F5C1900430F4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		59705419159DB8080003BA92 = {
+			isa = PBXGroup;
+			children = (
+				59705429159DB8080003BA92 /* mTakePicture */,
+				59E93D59192F5C1900430F4B /* mTakePictureResources */,
+				59705425159DB8080003BA92 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59705425159DB8080003BA92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59705424159DB8080003BA92 /* mTakePicture.a */,
+				59E93D51192F5C1900430F4B /* mTakePictureResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59705429159DB8080003BA92 /* mTakePicture */ = {
+			isa = PBXGroup;
+			children = (
+				5970542C159DB8080003BA92 /* mTakePicture.h */,
+				5970542D159DB8080003BA92 /* mTakePicture.m */,
+				5970542A159DB8080003BA92 /* Supporting Files */,
+			);
+			path = mTakePicture;
+			sourceTree = "<group>";
+		};
+		5970542A159DB8080003BA92 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5970542B159DB8080003BA92 /* mTakePicture-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59E93D59192F5C1900430F4B /* mTakePictureResources */ = {
+			isa = PBXGroup;
+			children = (
+				59E93D64192F5C5D00430F4B /* Resources */,
+				59E93D5A192F5C1900430F4B /* Supporting Files */,
+			);
+			path = mTakePictureResources;
+			sourceTree = "<group>";
+		};
+		59E93D5A192F5C1900430F4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59E93D5B192F5C1900430F4B /* mTakePictureResources-Info.plist */,
+				59E93D5C192F5C1900430F4B /* InfoPlist.strings */,
+				59E93D5F192F5C1900430F4B /* mTakePictureResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59E93D64192F5C5D00430F4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59E93D67192F5C6E00430F4B /* mTP_buttonBG.png */,
+				59E93D68192F5C6E00430F4B /* mTP_buttonBG@2x.png */,
+				59E93D69192F5C6E00430F4B /* mTP_cameraButton.png */,
+				59E93D6A192F5C6E00430F4B /* mTP_cameraButton@2x.png */,
+				59E93D6D192F5C6E00430F4B /* mTP_saveBG.png */,
+				59E93D6E192F5C6E00430F4B /* mTP_saveBG@2x.png */,
+				59E93D71192F5C6E00430F4B /* mTP_switchButton.png */,
+				59E93D72192F5C6E00430F4B /* mTP_switchButton@2x.png */,
+				59E93D89192F601900430F4B /* Localizable.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59705423159DB8080003BA92 /* mTakePicture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59705431159DB8080003BA92 /* Build configuration list for PBXNativeTarget "mTakePicture" */;
+			buildPhases = (
+				59705420159DB8080003BA92 /* Sources */,
+				59705421159DB8080003BA92 /* Frameworks */,
+				777704D215A59872005E1A33 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59E93EBC192F6B2900430F4B /* PBXTargetDependency */,
+			);
+			name = mTakePicture;
+			productName = mTakePicture;
+			productReference = 59705424159DB8080003BA92 /* mTakePicture.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		59E93D50192F5C1900430F4B /* mTakePictureResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59E93D62192F5C1900430F4B /* Build configuration list for PBXNativeTarget "mTakePictureResources" */;
+			buildPhases = (
+				59E93D4D192F5C1900430F4B /* Sources */,
+				59E93D4E192F5C1900430F4B /* Frameworks */,
+				59E93D4F192F5C1900430F4B /* Resources */,
+				59E93D63192F5C5300430F4B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mTakePictureResources;
+			productName = mTakePictureResources;
+			productReference = 59E93D51192F5C1900430F4B /* mTakePictureResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5970541B159DB8080003BA92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 5970541E159DB8080003BA92 /* Build configuration list for PBXProject "mTakePicture" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 59705419159DB8080003BA92;
+			productRefGroup = 59705425159DB8080003BA92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59705423159DB8080003BA92 /* mTakePicture */,
+				59E93D50192F5C1900430F4B /* mTakePictureResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59E93D4F192F5C1900430F4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59E93D77192F5C6E00430F4B /* mTP_buttonBG.png in Resources */,
+				59E93D78192F5C6E00430F4B /* mTP_buttonBG@2x.png in Resources */,
+				59E93D82192F5C6E00430F4B /* mTP_switchButton@2x.png in Resources */,
+				59E93D7A192F5C6E00430F4B /* mTP_cameraButton@2x.png in Resources */,
+				59E93D7E192F5C6E00430F4B /* mTP_saveBG@2x.png in Resources */,
+				59E93D81192F5C6E00430F4B /* mTP_switchButton.png in Resources */,
+				59E93D87192F601900430F4B /* Localizable.strings in Resources */,
+				59E93D5E192F5C1900430F4B /* InfoPlist.strings in Resources */,
+				59E93D79192F5C6E00430F4B /* mTP_cameraButton.png in Resources */,
+				59E93D7D192F5C6E00430F4B /* mTP_saveBG.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59E93D63192F5C5300430F4B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "cp -fR \"$CODESIGNING_FOLDER_PATH\" `echo $PROJECT_DIR | sed 's/appbuilder/appbuilder_server/g'`";
+		};
+		777704D215A59872005E1A33 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "cp -fR \"$CODESIGNING_FOLDER_PATH\" `echo $PROJECT_DIR | sed 's/appbuilder/appbuilder_server/g'`";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59705420159DB8080003BA92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5970542E159DB8080003BA92 /* mTakePicture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59E93D4D192F5C1900430F4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59E93EBC192F6B2900430F4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59E93D50192F5C1900430F4B /* mTakePictureResources */;
+			targetProxy = 59E93EBB192F6B2900430F4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59E93D5C192F5C1900430F4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59E93D5D192F5C1900430F4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		59E93D89192F601900430F4B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59E93D88192F601900430F4B /* Base */,
+				59E93D8A192F601E00430F4B /* en */,
+				59E93D8B192F602800430F4B /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5970542F159DB8080003BA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		59705430159DB8080003BA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+		59705432159DB8080003BA92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/mTakePicture.dst;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ../../libs/FacebookSDK;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mTakePicture/mTakePicture-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../libs/,
+					../../libs/FHSTwitterEngine,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../libs/nrGridView ../../Classes/tools/ ../../libs/tbxml/tbxml-headers/ ../../Classes/network ../../Classes/common ../../libs/Twitter+OAuth/SAOAuthTwitterEngine ../../libs/Twitter+OAuth/MGTwitterEngine ../../libs/SBJson/src/main/objc/ ../../Classes ../../libs/auth_Share ../../appbuilder";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Debug;
+		};
+		59705433159DB8080003BA92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/mTakePicture.dst;
+				EXECUTABLE_PREFIX = "";
+				FRAMEWORK_SEARCH_PATHS = ../../libs/FacebookSDK;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mTakePicture/mTakePicture-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					../../libs/,
+					../../libs/FHSTwitterEngine,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "../../libs/nrGridView ../../Classes/tools/ ../../libs/tbxml/tbxml-headers/ ../../Classes/network ../../Classes/common ../../libs/Twitter+OAuth/SAOAuthTwitterEngine ../../libs/Twitter+OAuth/MGTwitterEngine ../../libs/SBJson/src/main/objc/ ../../Classes ../../libs/auth_Share ../../appbuilder";
+				VALID_ARCHS = "armv7 arm64";
+			};
+			name = Release;
+		};
+		59E93D60192F5C1900430F4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mTakePictureResources/mTakePictureResources-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "mTakePictureResources/mTakePictureResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		59E93D61192F5C1900430F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				COMBINE_HIDPI_IMAGES = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mTakePictureResources/mTakePictureResources-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "mTakePictureResources/mTakePictureResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5970541E159DB8080003BA92 /* Build configuration list for PBXProject "mTakePicture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5970542F159DB8080003BA92 /* Debug */,
+				59705430159DB8080003BA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59705431159DB8080003BA92 /* Build configuration list for PBXNativeTarget "mTakePicture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59705432159DB8080003BA92 /* Debug */,
+				59705433159DB8080003BA92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59E93D62192F5C1900430F4B /* Build configuration list for PBXNativeTarget "mTakePictureResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59E93D60192F5C1900430F4B /* Debug */,
+				59E93D61192F5C1900430F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5970541B159DB8080003BA92 /* Project object */;
+}
