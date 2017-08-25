@@ -11,9 +11,9 @@
 
 #import "mTakePicture.h"
 #import "functionLibrary.h"
-#import "Reachability.h"
+#import "reachability.h"
 #import "TBXML.h"
-#import "UIImage+resize.h"
+#import "uiimage+resize.h"
 #import "twitterid.h"
 #import "auth_Share.h"
 
@@ -73,7 +73,7 @@
 @property (nonatomic, strong) NSURLConnection *postURLConnection;
 @property (nonatomic, assign) BOOL             showLink;
 
-@property (nonatomic, retain) NSData  *resultingImageData;
+@property (nonatomic, strong) NSData  *resultingImageData;
 
 @end
 
@@ -110,7 +110,7 @@ engine = _engine;
   TBXMLElement element;
   [xmlElement_ getValue:&element];
   
-  NSMutableArray *contentArray = [[[NSMutableArray alloc] init] autorelease];
+  NSMutableArray *contentArray = [[NSMutableArray alloc] init];
   
   NSString *szTitle = @"";
   TBXMLElement *titleElement = [TBXML childElementNamed:@"title" parentElement:&element];
@@ -124,7 +124,7 @@ engine = _engine;
   TBXMLElement *objectElement = [TBXML childElementNamed:@"button" parentElement:&element];
   while ( objectElement )
   {
-    NSMutableDictionary *objDictionary = [[[NSMutableDictionary alloc] init] autorelease];
+    NSMutableDictionary *objDictionary = [[NSMutableDictionary alloc] init];
     // search for tags <type>, <email>, <label> inside of tag <object>
     NSArray *tags = [NSArray arrayWithObjects:@"type", @"email", @"label", nil];
     TBXMLElement *tagElement = objectElement->firstChild;
@@ -190,32 +190,14 @@ engine = _engine;
 - (void)dealloc
 {
   self.params = nil;
-  self.panel  = nil;
-  self.save   = nil;
-  self.retakeButton = nil;
-  self.imgPicker = nil;
-  self.resultingImageView = nil;
-  self.engine     = nil;
-  
-  self.shareFacebookButton = nil;
-  self.shareTwitterButton  = nil;
-  self.shareEmailButton    = nil;
   
   
-  self.internetReachable = nil;
-  self.hostReachable     = nil;
   
-  self.postURLConnection = nil;
-  self.receivedData      = nil;
-  [shareButton release];
-  [toolBar release];
   
-  self.resultingImageData = nil;
-  self.cameraButton = nil;
+  
   
   [[NSNotificationCenter defaultCenter] removeObserver:self];
   
-  [super dealloc];
 }
 
 - (void)setParams:(NSDictionary *)params_
@@ -298,6 +280,7 @@ engine = _engine;
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    [super viewWillDisappear:animated];
   if(self.isMovingFromParentViewController || self.isBeingDismissed){
     [self showTabBar];
   }
@@ -305,9 +288,7 @@ engine = _engine;
 
 - (void)viewDidUnload
 {
-  [shareButton release];
   shareButton = nil;
-  [toolBar release];
   toolBar = nil;
   [super viewDidUnload];
 }
@@ -346,7 +327,6 @@ engine = _engine;
                                           cancelButtonTitle:NSBundleLocalizedString(@"mTP_noCameraOkButtonTitle", @"OK")
                                           otherButtonTitles:nil];
     [alert show];
-    [alert release];
     return;
   }
 }
@@ -368,7 +348,7 @@ engine = _engine;
 -(void)placeImgPicker
 {
   [[self.imgPicker view] removeFromSuperview];
-  self.imgPicker = [[[UIImagePickerController alloc] init] autorelease];
+  self.imgPicker = [[UIImagePickerController alloc] init];
   
   self.imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
   
@@ -406,7 +386,7 @@ engine = _engine;
   self.cameraButton.alpha = 0.7f;
   [self.cameraButton addTarget:self action:@selector(takePicture) forControlEvents:UIControlEventTouchUpInside];
   UIImage *cameraIcon = [UIImage imageNamed:resourceFromBundle(@"mTP_cameraButton")];
-  UIImageView *cameraIconView = [[[UIImageView alloc] initWithImage:cameraIcon] autorelease];
+  UIImageView *cameraIconView = [[UIImageView alloc] initWithImage:cameraIcon];
   cameraIconView.frame = CGRectMake( (self.cameraButton.frame.size.width - cameraIcon.size.width) / 2,
                                     (self.cameraButton.frame.size.height - cameraIcon.size.height) / 2,
                                     cameraIcon.size.width,
@@ -427,7 +407,7 @@ engine = _engine;
   cameraSwitch.alpha = 0.7f;
   [cameraSwitch addTarget:self action:@selector(_cameraSwitch) forControlEvents:UIControlEventTouchUpInside];
   UIImage *toggleIcon = [UIImage imageNamed:resourceFromBundle(@"mTP_switchButton")];
-  UIImageView *toggleIconView = [[[UIImageView alloc] initWithImage:toggleIcon] autorelease];
+  UIImageView *toggleIconView = [[UIImageView alloc] initWithImage:toggleIcon];
   toggleIconView.frame = CGRectMake( (cameraSwitch.frame.size.width - toggleIcon.size.width) / 2,
                                     (cameraSwitch.frame.size.height - toggleIcon.size.height) / 2,
                                     toggleIcon.size.width,
@@ -476,7 +456,6 @@ engine = _engine;
                                           cancelButtonTitle:NSBundleLocalizedString(@"mTP_errorSavingPhotoOkButtonTitle", @"OK")
                                           otherButtonTitles:nil];
     [alert show];
-    [alert release];
   } else {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                     message:NSBundleLocalizedString(@"mTP_successSavingPhotoMessage", @"The picture has been saved to your iPhone.")
@@ -484,7 +463,6 @@ engine = _engine;
                                           cancelButtonTitle:NSBundleLocalizedString(@"mTP_successSavingPhotoOkButtonTitle", @"OK")
                                           otherButtonTitles:nil];
     [alert show];
-    [alert release];
   }
   save.enabled = YES;
 }
@@ -567,14 +545,13 @@ engine = _engine;
                                             cancelButtonTitle:NSLocalizedString(@"general_sendingEmailFailedAlertOkButtonTitle", @"OK") //@"OK"
                                             otherButtonTitles:nil];
       [alert show];
-      [alert release];
     }
       break;
       
     default:
       break;
   }
-  [self dismissModalViewControllerAnimated:YES];
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -586,7 +563,6 @@ engine = _engine;
                                         cancelButtonTitle:NSBundleLocalizedString(@"mTP_sendingEmailSuccessAlertOkButtonTitle", @"OK")
                                         otherButtonTitles:nil];
   [alert show];
-  [alert release];
 }
 
 
@@ -594,7 +570,7 @@ engine = _engine;
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-  UIImage *resultingImage = [[info objectForKey:@"UIImagePickerControllerOriginalImage"] retain];
+  UIImage *resultingImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
 
   CGFloat shrinkFactor = 1.0f;
   
@@ -617,12 +593,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   
   self.resultingImageData = UIImageJPEGRepresentation(uploadableImage, 0.9);
   
-  [resultingImage release];
   
   self.view.userInteractionEnabled = YES;
   
   [self.resultingImageView removeFromSuperview];
-  self.resultingImageView = [[[UIImageView alloc] initWithFrame:self.view.bounds] autorelease];
+  self.resultingImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
   self.resultingImageView.autoresizesSubviews = YES;
   self.resultingImageView.autoresizingMask    = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   self.resultingImageView.contentMode         = UIViewContentModeCenter;//ScaleAspectFit;
@@ -649,7 +624,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   self.retakeButton.layer.backgroundColor = [UIColor colorWithRed:0.7f green:0.2f blue:0.1f alpha:1.0f].CGColor;
   [self.retakeButton addTarget:self action:@selector(cameraInit) forControlEvents:UIControlEventTouchUpInside];
   UIImage *retakeIcon = [UIImage imageNamed:resourceFromBundle(@"mTP_cameraButton")];
-  UIImageView *retakeIconView = [[[UIImageView alloc] initWithImage:retakeIcon] autorelease];
+  UIImageView *retakeIconView = [[UIImageView alloc] initWithImage:retakeIcon];
   retakeIconView.frame = CGRectMake(8.0f, (self.retakeButton.frame.size.height - retakeIcon.size.height) / 2, retakeIcon.size.width, retakeIcon.size.height);
   [self.retakeButton addSubview:retakeIconView];
   self.retakeButton.titleLabel.font = [UIFont boldSystemFontOfSize:16.0f];
@@ -662,13 +637,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   const CGFloat panelHeight = kSocialToolbarHeight;
   
   [self.panel removeFromSuperview];
-  self.panel = [[[UIView alloc] initWithFrame:CGRectMake(0.0f, self.view.frame.size.height, self.view.frame.size.width, 0.0f)] autorelease];
+  self.panel = [[UIView alloc] initWithFrame:CGRectMake(0.0f, self.view.frame.size.height, self.view.frame.size.width, 0.0f)];
   self.panel.autoresizesSubviews = YES;
   self.panel.autoresizingMask    = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
   self.panel.backgroundColor     = [UIColor clearColor];
   [self.view addSubview:self.panel];
   
-  UIView *panelBackground = [[[UIView alloc] initWithFrame:self.panel.bounds] autorelease];
+  UIView *panelBackground = [[UIView alloc] initWithFrame:self.panel.bounds];
   panelBackground.autoresizesSubviews = YES;
   panelBackground.autoresizingMask    = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   panelBackground.backgroundColor     = kSocialToolbarBackgroundColor;
@@ -756,7 +731,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
   UIButton *socialButton = [UIButton buttonWithType:UIButtonTypeCustom];
   
-  socialButton.frame = frame;
+  socialButton.frame = frame;//CGRectMake(originX, kSocialButtonOriginY, size.width, size.height);
   socialButton.layer.cornerRadius = kSocialButtonCornerRadius;
   socialButton.layer.masksToBounds = YES;
   socialButton.layer.backgroundColor = backgroundColor.CGColor;
@@ -769,6 +744,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   [socialButton addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
   
   [socialButton setImage:socialImage forState:UIControlStateNormal];
+  //socialButton.adjustsImageWhenHighlighted = NO;
   
   socialButton.enabled = self.bInet;
   
@@ -810,7 +786,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   
   CGImageRef rotatedImage = CGBitmapContextCreateImage(bmContext);
   CFRelease(bmContext);
-  [(id)rotatedImage autorelease];
   
   return rotatedImage;
 }
@@ -839,7 +814,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                                         cancelButtonTitle:NSBundleLocalizedString(@"mTP_sendingEmailErrorAlertOkButtonTitle", @"OK")
                                         otherButtonTitles:nil];
   [alert show];
-  [alert release];
 }
 
 
@@ -854,7 +828,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
   return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
   return UIInterfaceOrientationMaskPortrait;
 }
